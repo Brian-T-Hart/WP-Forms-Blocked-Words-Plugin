@@ -3,7 +3,7 @@
 Plugin Name: Blocked Words Filter for WPForms
 Plugin URI:  https://example.com/
 Description: A plugin to filter blocked words in WPForms text areas.
-Version:     1.1
+Version:     1.2
 Author:      Your Name
 Author URI:  https://example.com/
 License:     GPL2
@@ -67,8 +67,8 @@ function wpf_dev_blocked_words_filter_paragraph($field_id, $field_submit, $form_
   $blocked_words = array_map('trim', explode(',', $blocked_words_option));
 
   foreach ($blocked_words as $word) {
-    if (strpos($field_submit, $word) !== FALSE) {
-      wpforms()->process->errors[$form_data['id']][$field_id] = esc_html__('The message appears to be spam. Please check for spammy content and try again.', 'wpforms');
+    if (stripos($field_submit, $word) !== FALSE) {
+      wpforms()->process->errors[$form_data['id']][$field_id] = esc_html__('The message appears to be spam or it contains blocked content. Please check your message and try again.', 'wpforms');
       return;
     }
   }
