@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Blocked Words Filter for WPForms
-Plugin URI:  https://example.com/
+Plugin URI:  https://www.brianthart.com/
 Description: A plugin to filter blocked words in WPForms text areas.
-Version:     1.2
-Author:      Your Name
-Author URI:  https://example.com/
+Version:     1.21
+Author:      Brian Hart
+Author URI:  https://www.brianthart.com/
 License:     GPL2
 */
 
